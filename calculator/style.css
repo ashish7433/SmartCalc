@@ -1,61 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #0a0a0a,#3a4452);
-}
-.calculator{
-    border: 1px solid #717377;
-    border-radius: 16px;
-    padding: 20px;
-    background: transparent;
-    box-shadow: 0px 3px 5px rgb(113, 115, 119, 0.5);
+    min-height: 100vh;
+    background: #ffffff;
 }
 
-input{
-    width: 320px;
+.calculator {
+    background: #2d2d2d;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.display {
+    width: 100%;
+    height: 80px;
     border: none;
-    padding: 24px;
-    margin: 10px;
-    background: transparent;
-    box-shadow: 0px 3px 18px rgbs(84, 84, 84, 0.1);
-    font-size:40px ;
-    text-align: right;
-    cursor: pointer;
-}
-
-input::placeholder{
-    color: #fff;
-}
-
-button{
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 50%;
-    border: none;
-    background: transparent;
+    background: #3a3a3a;
     color: #ffffff;
-    font-size: 20px;
-    box-shadow: -8px -8px 15px rgb(255, 255, 255, 0.1);
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 300;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 18px;
+    border: none;
+    background: #3a3a3a;
+    color: #ffffff;
+    font-size: 1.3em;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
-.eqlbtn{
-    background-color: #fb7c14;
+button:hover {
+    background: #4a4a4a;
 }
 
-.operator{
-    color: #6dee0a;
+button:active {
+    transform: scale(0.95);
+    background: #2d2d2d;
+}
+
+.operator {
+    background: #2196F3;
+    color: white;
+}
+
+.operator:hover {
+    background: #1976D2;
+}
+
+.equals {
+    background: #4CAF50;
+    color: white;
+}
+
+.equals:hover {
+    background: #45a049;
+}
+
+.clear {
+    background: #ff4444;
+    color: white;
+}
+
+.clear:hover {
+    background: #cc0000;
 }
