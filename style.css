@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html,body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("./images/calc_bg_img.png") center/cover no-repeat;
+}
+
+.calculator {
+    background: #2d2d2d;
+    padding: 30px; /* Increased padding */
+    border-radius: 20px; /* Larger border radius */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    width: 400px; /* Increased width (original: 350px) */
+}
+
+.display {
+    width: 100%;
+    height: 100px; /* Taller display (original: 80px) */
+    border: none;
+    background: #3a3a3a;
+    color: #ffffff;
+    text-align: right;
+    padding: 25px; /* More padding (original: 20px) */
+    font-size: 3em; /* Larger text (original: 2.5em) */
+    margin-bottom: 25px; /* More spacing */
+    border-radius: 10px; /* Smoother corners */
+    font-weight: 300;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Larger gap (original: 12px) */
+}
+
+button {
+    padding: 22px; /* Bigger buttons (original: 18px) */
+    border: none;
+    background: #3a3a3a;
+    color: #ffffff;
+    font-size: 1.5em; /* Larger text (original: 1.3em) */
+    cursor: pointer;
+    border-radius: 10px; /* Smoother corners */
+    transition: all 0.2s ease;
+}
+
+/* Hover/active effects remain the same */
+button:hover { background: #4a4a4a; }
+button:active { transform: scale(0.95); background: #2d2d2d; }
+
+.operator { background: #2196F3; }
+.operator:hover { background: #1976D2; }
+
+.equals { background: #4CAF50; }
+.equals:hover { background: #45a049; }
+
+.clear { background: #ff4444; }
+.clear:hover { background: #cc0000; }
